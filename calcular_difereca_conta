@@ -1,0 +1,16 @@
+const prompt = require("prompt-sync")();
+
+
+// Solicita ao usuário o valor total da conta do bar
+const valorTotalConta = parseFloat(prompt("Informe o valor total da conta do bar:"));
+
+// Calcula o valor a ser pago, sem centavos
+const valorPagoCarlosAndre = Math.floor(valorTotalConta / 3);
+
+// Calcula o valor a ser pago por Felipe (diferença entre o valor total e o valor pago por Carlos e André)
+const valorPagoFelipe = valorTotalConta - (valorPagoCarlosAndre * 2);
+
+// Exibe os resultados no console
+console.log(`Carlos deve pagar: R$${valorPagoCarlosAndre.toFixed(2)}`);
+console.log(`André deve pagar: R$${valorPagoCarlosAndre.toFixed(2)}`);
+console.log(`Felipe deve pagar: R$${valorPagoFelipe.toFixed(2)}`);
